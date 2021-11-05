@@ -7,7 +7,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
-      date: "Nov 3 Wed, 15:26",
+      date: new Date(response.data.dt * 1000),
       city: response.data.name,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
@@ -22,7 +22,9 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <h1 className="City">{weatherData.city}</h1>
-        <h4>{weatherData.date} </h4>
+       <h4>
+          <FormattedDate date={weatherData.date} />
+        </h4>
         <form>
           <div className="row">
             <div className="col-7">
