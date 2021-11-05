@@ -11,7 +11,7 @@ export default function formattedDate() {
     "Friday",
     "Saturday",
   ];
-  let day = days[props.date.getDay()];
+  let day = days[now.getDay()];
   let months = [
     "January",
     "February",
