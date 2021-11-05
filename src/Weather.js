@@ -64,13 +64,13 @@ export default function Weather(props) {
           <div className="col-sm">
             <ul>
               <li>
-                <i class="fas fa-tint"></i>:{weatherData.humidity}%{" "}
+                <i className="fas fa-tint"></i>:{weatherData.humidity}%{" "}
               </li>
               <li>
-                <i class="fas fa-wind"></i>:{Math.round(weatherData.wind)}m/s{" "}
+                <i className="fas fa-wind"></i>:{Math.round(weatherData.wind)}m/s{" "}
               </li>
               <li>
-                <i class="fas fa-cloud"></i>:{weatherData.cloudiness}%
+                <i className="fas fa-cloud"></i>:{weatherData.cloudiness}%
               </li>
             </ul>
           </div>
