@@ -1,11 +1,12 @@
 import React from "react";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <div className="row today">
-        <div className="col-sm">
-          <img src={props.data.iconUrl} alt={props.data.description} />
+        <div className="col-sm mt-2">
+           <WeatherIcon code={props.data.icon} />
         </div>
 
         <div className="col-sm mt-3">
