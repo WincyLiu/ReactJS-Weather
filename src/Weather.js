@@ -14,6 +14,7 @@ export default function Weather(props) {
       ready: true,
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
+      country: response.data.sys.country,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
@@ -50,7 +51,7 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <h1 className="City">{weatherData.city}</h1>
+        <h1 className="City">{weatherData.city},{weatherData.country}</h1>
         <h4>
           <FormattedDate date={weatherData.date} />
         </h4>
