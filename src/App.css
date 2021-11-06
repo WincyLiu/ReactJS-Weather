@@ -8,3 +8,7 @@
     font-size:11px;
     margin: 10px 0 ;
 }
+
+.App .contact a {
+  color: #4275ac;
+}
